@@ -127,10 +127,12 @@
      packages = with pkgs; [
        tree
      ];
+     shell = pkgs.fish;
    };
 
    programs.firefox.enable = true;
    programs.niri.enable = true;
+   programs.fish.enable = true;
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
