@@ -4,6 +4,7 @@
   ./programs/lf.nix
   ./programs/fish.nix
   ./programs/kitty.nix
+  ./programs/neovim.nix
   ];
   home.username = "dinzz";
   home.homeDirectory = "/home/dinzz";
