@@ -16,16 +16,13 @@
 
   boot.kernelParams = [
       "acpi_backlight=native"
-   ];
-  
-  boot.kernelParams = [
       "quiet"
       "loglevel=3"
       "systemd.show_status=false"
       "rd.udev.log_level=3"
       "udev.log_priority=3"
-        ];
-
+     ];
+  
   networking.hostName = "nixos-btw"; # Define your hostname.
    
 
