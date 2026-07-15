@@ -29,6 +29,6 @@
       allow_remote_control = "yes";
     };
 
-    themeFile = "Cobalt Neon";
+    themeFile = "cobalt_neon";
   };
 }
