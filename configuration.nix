@@ -17,6 +17,14 @@
   boot.kernelParams = [
       "acpi_backlight=native"
    ];
+  
+  boot.kernelParams = [
+      "quiet"
+      "loglevel=3"
+      "systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+        ];
 
   networking.hostName = "nixos-btw"; # Define your hostname.
    
@@ -139,11 +147,11 @@
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      neovim
-     ghostty
      btop
      fastfetch
      git
      brightnessctl
+     kitty
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
