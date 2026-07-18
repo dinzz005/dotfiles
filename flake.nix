@@ -16,18 +16,18 @@
     	inputs.nixpkgs.follows = "nixpkgs";
      };
 
-     quickshell = {
-        url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-        inputs.nixpkgs.follows = "nixpkgs";
-     };
-     qml-niri = {
-         url = "github:imiric/qml-niri/main";
-        inputs.nixpkgs.follows = "nixpkgs";
-        inputs.quickshell.follows = "quickshell";
-     };
+   #  quickshell = {
+   #     url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+   #     inputs.nixpkgs.follows = "nixpkgs";
+   # };
+   #  qml-niri = {
+   #      url = "github:imiric/qml-niri/main";
+   #     inputs.nixpkgs.follows = "nixpkgs";
+   #     inputs.quickshell.follows = "quickshell";
+   #  };
     
  };
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser, quickshell, qml-niri,   ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser, ... }: {
   nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       modules = [
 	  ./configuration.nix
