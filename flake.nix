@@ -15,9 +15,19 @@
     	url = "github:youwen5/zen-browser-flake";
     	inputs.nixpkgs.follows = "nixpkgs";
      };
+
+     quickshell = {
+        url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+        inputs.nixpkgs.follows = "nixpkgs";
+     };
+     qml-niri = {
+         url = "github:imiric/qml-niri/main";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.quickshell.follows = "quickshell";
+     };
     
  };
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser,  ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser, quickshell, qml-niri,   ... }: {
   nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       modules = [
 	  ./configuration.nix
