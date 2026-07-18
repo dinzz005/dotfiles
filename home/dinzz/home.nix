@@ -6,7 +6,6 @@
   ./programs/kitty.nix
   ./programs/zen-browser.nix
   ./programs/quickshell.nix
-  ./programs/theme.nix
   ];
   home.username = "dinzz";
   home.homeDirectory = "/home/dinzz";
