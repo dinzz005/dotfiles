@@ -135,7 +135,7 @@
      shell = pkgs.fish;
    };
 
-   programs.firefox.enable = true;
+   # programs.firefox.enable = true;
    programs.niri.enable = true;
    programs.fish.enable = true;
   # List packages installed in system profile.

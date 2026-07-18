@@ -10,9 +10,14 @@
          url = "github:sodiboo/niri-flake";
 	 inputs.nixpkgs.follows = "nixpkgs";
      };
+
+     zen-browser = {
+    	url = "github:youwen5/zen-browser-flake";
+    	inputs.nixpkgs.follows = "nixpkgs";
+     };
     
  };
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser,  ... }: {
   nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       modules = [
 	  ./configuration.nix
