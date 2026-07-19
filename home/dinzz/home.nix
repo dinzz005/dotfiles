@@ -5,7 +5,7 @@
   ./programs/fish.nix
   ./programs/kitty.nix
   ./programs/zen-browser.nix
-  ./prrograms/dank.nix
+  ./programs/dank.nix
   ];
   home.username = "dinzz";
   home.homeDirectory = "/home/dinzz";
