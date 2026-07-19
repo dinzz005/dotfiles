@@ -26,17 +26,17 @@
    #     inputs.quickshell.follows = "quickshell";
    #  };
 
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #dms = {
+     # url = "github:AvengeMedia/DankMaterialShell/stable";
+     # inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    }; 
+    #dgop = {
+     # url = "github:AvengeMedia/dgop";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    #}; 
  };
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser, dms, dgop,  ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser, ... }: {
   nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       modules = [
 	  ./configuration.nix
