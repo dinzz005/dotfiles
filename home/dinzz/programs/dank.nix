@@ -6,7 +6,6 @@
     inputs.dms.homeModules.niri
   ];
   
-  xdg.configFile."niri/config.kdl".source = ../dotfiles/niri/config.kdl;
 
   programs.dank-material-shell = {
     enable = true;
