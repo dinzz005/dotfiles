@@ -152,6 +152,7 @@
      waybar
      stow
      swaybg
+     lf
     ];
 
   # Some programs need SUID wrappers, can be configured further or are

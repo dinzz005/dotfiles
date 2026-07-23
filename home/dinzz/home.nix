@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 { 
   imports = [
-  ./programs/lf.nix
+ #  ./programs/lf.nix
   ./programs/fish.nix
   ./programs/kitty.nix
   ./programs/zen-browser.nix
