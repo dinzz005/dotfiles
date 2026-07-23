@@ -152,7 +152,8 @@
      waybar
      stow
      swaybg
-     lf
+     yazi
+     nemo
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
