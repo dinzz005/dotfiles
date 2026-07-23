@@ -149,6 +149,7 @@
      git
      brightnessctl
      kitty
+     waybar
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
