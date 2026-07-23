@@ -63,7 +63,15 @@
   #  services.xserver = {
   #   enable = true;
   #};
-  
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+     config = {
+       common.default = [ "gtk" ];
+     };
+  }; 
   # Bluetooth settings
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
