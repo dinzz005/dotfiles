@@ -1,11 +1,10 @@
 { config, pkgs, ... }:
 { 
   imports = [
- #  ./programs/lf.nix
+  ./programs/theme.nix
   ./programs/fish.nix
   ./programs/kitty.nix
   ./programs/zen-browser.nix
-#  ./programs/dank.nix
   ];
   home.username = "dinzz";
   home.homeDirectory = "/home/dinzz";

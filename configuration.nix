@@ -63,6 +63,11 @@
   #  services.xserver = {
   #   enable = true;
   #};
+  
+  #dark mode enabling 
+  programs.dconf.enable = true;
+
+  # gtk portal support
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
@@ -72,6 +77,8 @@
        common.default = [ "gtk" ];
      };
   }; 
+
+
   # Bluetooth settings
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
@@ -162,6 +169,12 @@
      swaybg
      yazi
      nemo
+     # for dark theme
+     adwaita-icon-theme
+     gnome-themes-extra
+     papirus-icon-theme
+     bibata-cursors
+
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
