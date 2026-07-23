@@ -169,6 +169,7 @@
      swaybg
      yazi
      nemo
+     fuzzel
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
