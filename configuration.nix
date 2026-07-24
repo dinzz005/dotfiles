@@ -164,7 +164,6 @@
      git
      brightnessctl
      kitty
-     waybar
      stow
      swaybg
      yazi

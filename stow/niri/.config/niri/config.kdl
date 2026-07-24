@@ -110,6 +110,8 @@ input {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
+
+    background-color "transparent"
     // Set gaps around windows in logical pixels.
     gaps 16
 
@@ -156,10 +158,10 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
+        off
 
-        // How many logical pixels the ring extends out from the windows.
-        width 4
+        // How many logical pixels the ring extends out from the windows.     
+	// width 4
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -167,13 +169,13 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+       // active-color "#7fc8ff"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#505050"
+        //inactive-color "#505050"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -193,16 +195,15 @@ layout {
 
     // You can also add a border. It's similar to the focus ring, but always visible.
     border {
-        // The settings are the same as for the focus ring.
+        // The settings are the same as for the focus ring.niri window rule transparency to all applications
         // If you enable the border, you probably want to disable the focus ring.
         off
-
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        
+        width 2
+	active-color "#89b4fa"
+        inactive-color "#45475a"
 
         // Color of the border around windows that request your attention.
-        urgent-color "#9b0000"
 
         // Gradients can use a few different interpolation color spaces.
         // For example, this is a pastel rainbow gradient via in="oklch longer hue".
@@ -262,14 +263,40 @@ layout {
     }
 }
 
+
+/*
+ * Layer Rules
+ *
+ * These control Wayland layer-shell surfaces such as:
+ *  - swaybg
+ *  - waybar
+ *  - notifications
+ *  - launchers
+ *
+ * We'll use this so the wallpaper is also visible behind
+ * the Niri Overview (workspace overview).
+ *
+ * NOTE:
+ * The namespace ("wallpaper" or "swaybg") depends on what
+ * `niri msg layers` reports.
+ */
+layer-rule {
+    // Replace "wallpaper" with the namespace from
+    // `niri msg layers` if it's different.
+    match namespace="^wallpaper$"
+
+    // Draw this layer inside the Overview backdrop.
+    place-within-backdrop true
+}
+
+
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/dinzz/dotfiles/stow/pictures/default.png"
+spawn-at-startup "swaybg" "-i" "/home/dinzz/dotfiles/stow/pictures/default.png" "-m" "fill" 
 //spawn-at-startup "quickshell"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -312,6 +339,9 @@ animations {
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
+window-rule {
+   opacity 0.75
+}
 window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
