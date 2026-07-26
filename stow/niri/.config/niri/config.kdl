@@ -296,7 +296,7 @@ layer-rule {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "swaybg" "-i" "/home/dinzz/dotfiles/stow/pictures/default.png" "-m" "fill" 
+spawn-at-startup "swaybg" "-i" "/home/dinzz/dotfiles/stow/pictures/rick-tokyonight.png" "-m" "fill" 
 //spawn-at-startup "quickshell"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:

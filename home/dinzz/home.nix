@@ -3,7 +3,6 @@
   imports = [
   ./programs/theme.nix
   ./programs/fish.nix
-  ./programs/kitty.nix
   ./programs/zen-browser.nix
   ./programs/ashell.nix
   ];
