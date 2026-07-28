@@ -13,15 +13,19 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
+  boot.consoleLogLevel = 0;
+  boot.initrd.verbose = false;
 
   boot.kernelParams = [
-      "acpi_backlight=native"
-      "quiet"
-      "loglevel=3"
-      "systemd.show_status=false"
-      "rd.udev.log_level=3"
-      "udev.log_priority=3"
-     ];
+     "acpi_backlight=native"
+     "quiet"
+     "loglevel=0"
+     "systemd.show_status=false"
+     "rd.udev.log_level=0"
+     "udev.log_priority=0"
+     "vt.global_cursor_default=0"
+   ];
   
   networking.hostName = "nixos-btw"; # Define your hostname.
    
@@ -63,7 +67,10 @@
   #  services.xserver = {
   #   enable = true;
   #};
-  
+
+  # asus services enabled
+  services.asusd.enable = true;
+  programs.rog-control-center.enable = true;
   #dark mode enabling 
   programs.dconf.enable = true;
 
