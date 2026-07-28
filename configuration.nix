@@ -7,7 +7,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/ashell.nix
     ];
   nixpkgs.config.allowUnfree = true;
 
@@ -177,6 +176,7 @@
      yazi
      nemo
      fuzzel
+     ashell
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
