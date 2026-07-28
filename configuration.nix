@@ -95,7 +95,8 @@
       Experimental = true;
     };
   };
-
+ 
+ services.upower.enable = true;
   # graphics driver settings
   services.xserver.videoDrivers = ["nvidia"];
   hardware.graphics = {

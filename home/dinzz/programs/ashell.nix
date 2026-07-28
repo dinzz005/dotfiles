@@ -1,23 +1,20 @@
-{ pkgs, ... }:
+programs.ashell = {
+  enable = true;
+  systemd.enable = true;
 
-{
-  programs.ashell = {
-    enable = true;
+  settings = {
+    region = "en-IN";
 
-    systemd.enable = true;
-
-    settings = {
-      modules = {
-        left = [ "Workspaces" ];
-        center = [ "WindowTitle" ];
-        right = [
-          "SystemInfo"
-          [
-            "Clock"
-            "Settings"
-          ]
-        ];
-      };
+    modules = {
+      left = [ "Workspaces" ];
+      center = [ "WindowTitle" ];
+      right = [
+        "SystemInfo"
+        [
+          "Clock"
+          "Settings"
+        ]
+      ];
     };
   };
-}
+};
