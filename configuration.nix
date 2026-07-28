@@ -70,7 +70,6 @@
 
   # asus services enabled
   services.asusd.enable = true;
-  programs.rog-control-center.enable = true;
   #dark mode enabling 
   programs.dconf.enable = true;
 
