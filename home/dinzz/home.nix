@@ -4,7 +4,6 @@
   ./programs/theme.nix
   ./programs/fish.nix
   ./programs/zen-browser.nix
-  ./programs/ashell.nix
   ];
   home.username = "dinzz";
   home.homeDirectory = "/home/dinzz";
