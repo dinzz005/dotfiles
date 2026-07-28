@@ -16,6 +16,11 @@
     	inputs.nixpkgs.follows = "nixpkgs";
      };
 
+     ashell = {
+       url = "github:MalpenZibo/ashell";
+       inputs.nixpkgs.follows = "nixpkgs";
+     };
+
    #  quickshell = {
    #     url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
    #     inputs.nixpkgs.follows = "nixpkgs";
@@ -24,20 +29,14 @@
    #      url = "github:imiric/qml-niri/main";
    #     inputs.nixpkgs.follows = "nixpkgs";
    #     inputs.quickshell.follows = "quickshell";
-   #  };
-
-    #dms = {
-     # url = "github:AvengeMedia/DankMaterialShell/stable";
-     # inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
-    #dgop = {
-     # url = "github:AvengeMedia/dgop";
-      #inputs.nixpkgs.follows = "nixpkgs";
-    #}; 
+   #  };. 
  };
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, zen-browser,ashell, ... }: {
   nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        inherit inputs;
+       };
+
       modules = [
 	  ./configuration.nix
 	  niri.nixosModules.niri
