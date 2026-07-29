@@ -69,7 +69,12 @@
   #};
 
   # asus services enabled
-  services.asusd.enable = true;
+  #services = {
+  #   asusd = {
+  #     enable = true;
+  #     enableUserService = true;
+  #   };
+  #};
   #dark mode enabling 
   programs.dconf.enable = true;
 
