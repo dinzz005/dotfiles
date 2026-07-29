@@ -10,3 +10,15 @@ sudo nix-store --gc
 # depduplicate the identical files or others
 sudo nix-store --optimise
 ```
+
+cd ~/dotfiles
+
+# Update dependencies
+nix flake update
+
+# Build and switch
+sudo nixos-rebuild switch --flake .#nixos-btw
+
+# If everything is OK
+git add flake.lock
+git commit -m "Update flake inputs"
