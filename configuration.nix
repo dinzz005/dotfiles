@@ -69,12 +69,8 @@
   #};
 
   # asus services enabled
-  services = {
-     asusd = {
-       enable = true;
-       enableUserService = true;
-     };
-  };
+  services.asusctl.enable = true;
+  services.power-profiles-daemon.enable = true;
   #dark mode enabling 
   programs.dconf.enable = true;
 
