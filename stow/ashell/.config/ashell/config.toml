@@ -9,3 +9,7 @@ right = [
   "SystemInfo",
   ["Clock", "Settings"]
 ]
+[settings]
+indicators = [
+  "PowerProfile"
+]
