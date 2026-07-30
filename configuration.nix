@@ -184,6 +184,7 @@
      nemo
      fuzzel
      ashell
+     xwayland
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
