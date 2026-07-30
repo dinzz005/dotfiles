@@ -178,7 +178,6 @@
      nemo
      fuzzel
      ashell
-     asusctl
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
