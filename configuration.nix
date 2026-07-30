@@ -74,6 +74,12 @@
   #dark mode enabling 
   programs.dconf.enable = true;
 
+
+  programs.steam = {
+  enable = true;
+};
+
+
   # gtk portal support
   xdg.portal = {
     enable = true;
