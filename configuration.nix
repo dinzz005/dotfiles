@@ -68,6 +68,8 @@
   #  services.xserver = {
   #   enable = true;
   #};
+
+  services.supergfxd.enable = true;
   services.power-profiles-daemon.enable = true;
   #dark mode enabling 
   programs.dconf.enable = true;
