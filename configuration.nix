@@ -78,7 +78,8 @@
   programs.steam = {
   enable = true;
 };
-
+programs.steam.gamescopeSession.enable = true;
+programs.gamemode.enable = true;
 
   # gtk portal support
   xdg.portal = {
@@ -185,6 +186,9 @@
      fuzzel
      ashell
      xwayland-satellite
+     mangohud
+     protonup-qt
+     heroic
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
