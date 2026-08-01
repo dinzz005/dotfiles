@@ -7,12 +7,6 @@
     qemu = {
       package = pkgs.qemu_kvm;
 
-      # UEFI firmware for modern operating systems
-      ovmf = {
-        enable = true;
-        packages = [ pkgs.OVMFFull.fd ];
-      };
-
       # TPM 2.0 (required for Windows 11)
       swtpm.enable = true;
     };
