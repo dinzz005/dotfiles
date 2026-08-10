@@ -190,7 +190,6 @@ programs.gamemode.enable = true;
      mangohud
      protonup-qt
      heroic
-     gparted
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
