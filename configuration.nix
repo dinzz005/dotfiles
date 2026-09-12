@@ -178,6 +178,7 @@ programs.gamemode.enable = true;
      btop
      fastfetch
      git
+     nodejs_26
      brightnessctl
      kitty
      stow
