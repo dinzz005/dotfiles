@@ -179,6 +179,8 @@ programs.gamemode.enable = true;
      fastfetch
      git
      nodejs_26
+     zip
+     unzip
      brightnessctl
      kitty
      stow
