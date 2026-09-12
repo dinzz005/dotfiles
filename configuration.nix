@@ -189,7 +189,7 @@ programs.gamemode.enable = true;
      xwayland-satellite
      mangohud
      protonup-qt
-     impression
+     opencode
      # for dark theme
      adwaita-icon-theme
      gnome-themes-extra
